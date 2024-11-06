@@ -4,17 +4,19 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-public class CalculadoraTest {
+public class CalcularTest {
     Calculadora calculadora = new Calculadora();
 
     @Test
-    void testDividir() {
-        assertTrue(calculadora.sumar(33, 44) == 77);
+    void testSumar() {
+        long resultado = calculadora.sumar(33, 44);
+        assertTrue(resultado == 77);
     }
 
     @Test
     void testMultiplicar() {
-        assertTrue(calculadora.restar(45, 5) == 40);
+        long resultado = calculadora.restar(45, 5);
+        assertTrue(resultado == 40);
     }
 
     @Test
@@ -23,7 +25,7 @@ public class CalculadoraTest {
     }
 
     @Test
-    void testSumar() {
-        assertTrue(calculadora.dividir(20, 5)==4);
+    void testDividir() {
+        assertTrue(calculadora.dividir(20, 5) == 4);
     }
 }
